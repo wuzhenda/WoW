@@ -1,0 +1,92 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@section header{
+
+
+    <script type="text/javascript">
+
+        var openSocket = function () {
+
+            var socket = new WebSocket("ws://localhost:8181/main");
+            $("#msg").html("Initializing..");
+
+
+            socket.onopen = function () {
+                $("#msg").html("Socket opened..");
+                socket.send("create;main");
+            }
+
+            socket.onmessage = function (msg) {
+                $("#msg").html("image received..");
+                var canvas = document.getElementById("canvas");
+                var ctx = canvas.getContext("2d");
+                var img = new Image;
+                img.onload = function () {
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    ctx.drawImage(img, 0, 0); // Or at whatever offset you like
+                };
+                img.src = "data:image/gif;base64," + msg.data;
+            }
+
+            $("#canvas").mousedown(function (e) {
+                var point = getXY(e);
+                socket.send("mousedown;" + point.X + ";" + point.Y);
+            });
+
+            $("#canvas").mouseup(function (e) {
+                var point = getXY(e);
+                socket.send("mouseup;" + point.X + ";" + point.Y);
+            });
+
+            $("#canvas").mousemove(function (e) {
+                var point = getXY(e);
+                socket.send("mousemove;" + point.X + ";" + point.Y);
+            });
+
+
+        }
+
+        var start = function () {
+
+            if ("WebSocket" in window) {
+                openSocket();
+            }
+            else {
+                $("#msg").html("Your browser is not supporting sockets");
+            }
+
+        }
+
+        //Utils
+
+        function getXY(e) {
+            var canvas = document.getElementById("canvas");
+            var x;
+            var y;
+            if (e.pageX || e.pageY) {
+                x = e.pageX;
+                y = e.pageY;
+            }
+            else {
+                x = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
+                y = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
+            }
+            x -= canvas.offsetLeft;
+            y -= canvas.offsetTop;
+            var pnt = { "X": x, "Y": y };
+            return pnt;
+        }
+
+
+        window.onload = start;
+
+       </script>
+}
+
+
+    <canvas id="canvas" width="1024" height="800"></canvas>
+
+    <span id="msg" />
+    <span id="mse" />

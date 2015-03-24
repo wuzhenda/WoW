@@ -1,0 +1,32 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title>Screen Streaming</title>
+        <script type="text/javascript">
+            var op = function () {
+                alert("opening..");
+                var socket = new WebSocket("ws://localhost:8181/main");
+                socket.onopen = function () {
+
+                }
+
+                socket.onmessage = function (msg) {
+                    var canvas = document.getElementById("canvas");
+                    var ctx = canvas.getContext("2d");
+                    var img = new Image;
+                    img.onload = function () {
+                        ctx.clearRect(0, 0, canvas.width, canvas.height)
+                        ctx.drawImage(img, 0, 0); // Or at whatever offset you like
+                    };
+                    img.src = "data:image/gif;base64," + msg.data; ;
+                }
+            }
+
+            window.onload = op;        
+            
+            </script>
+	</head>
+    <body>
+    <canvas id="canvas" width="300" height="300"></canvas>
+	</body>
+</html>

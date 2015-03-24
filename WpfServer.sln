@@ -1,0 +1,93 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfServer.MvcClient", "WpfServer.MvcClient\WpfServer.MvcClient.csproj", "{3235B328-6CD2-4792-8C21-0EE751DB2170}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfServer.Screens", "WpfServer.Screens\WpfServer.Screens.csproj", "{88803DD2-C91B-4BD5-B3F1-7338E695B202}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfServer", "WpfServer\WpfServer.csproj", "{DBA1487D-9D9A-402B-BF41-32AE0DBE45DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfServer.Host", "WpfServer.Host\WpfServer.Host.csproj", "{2D9F44D1-3D2E-4D12-A330-E7244CDB5BE7}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs04
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Nugget\\src\\Nugget\\Nugget.csproj
+		SccProjectTopLevelParentUniqueName1 = WpfServer.sln
+		SccProjectName1 = Nugget/src/Nugget
+		SccLocalPath1 = Nugget\\src\\Nugget
+		SccProjectUniqueName2 = WpfServer.Host\\WpfServer.Host.csproj
+		SccProjectName2 = WpfServer.Host
+		SccLocalPath2 = WpfServer.Host
+		SccProjectUniqueName3 = WpfServer.MvcClient\\WpfServer.MvcClient.csproj
+		SccProjectName3 = WpfServer.MvcClient
+		SccLocalPath3 = WpfServer.MvcClient
+		SccProjectUniqueName4 = WpfServer.Screens\\WpfServer.Screens.csproj
+		SccProjectName4 = WpfServer.Screens
+		SccLocalPath4 = WpfServer.Screens
+		SccProjectUniqueName5 = WpfServer\\WpfServer.csproj
+		SccProjectName5 = WpfServer
+		SccLocalPath5 = WpfServer
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3235B328-6CD2-4792-8C21-0EE751DB2170}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3235B328-6CD2-4792-8C21-0EE751DB2170}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3235B328-6CD2-4792-8C21-0EE751DB2170}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3235B328-6CD2-4792-8C21-0EE751DB2170}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3235B328-6CD2-4792-8C21-0EE751DB2170}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3235B328-6CD2-4792-8C21-0EE751DB2170}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3235B328-6CD2-4792-8C21-0EE751DB2170}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3235B328-6CD2-4792-8C21-0EE751DB2170}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{3235B328-6CD2-4792-8C21-0EE751DB2170}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{3235B328-6CD2-4792-8C21-0EE751DB2170}.Release|x86.ActiveCfg = Release|Any CPU
+		{88803DD2-C91B-4BD5-B3F1-7338E695B202}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{88803DD2-C91B-4BD5-B3F1-7338E695B202}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{88803DD2-C91B-4BD5-B3F1-7338E695B202}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{88803DD2-C91B-4BD5-B3F1-7338E695B202}.Debug|x86.ActiveCfg = Debug|x86
+		{88803DD2-C91B-4BD5-B3F1-7338E695B202}.Debug|x86.Build.0 = Debug|x86
+		{88803DD2-C91B-4BD5-B3F1-7338E695B202}.Release|Any CPU.ActiveCfg = Release|x86
+		{88803DD2-C91B-4BD5-B3F1-7338E695B202}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{88803DD2-C91B-4BD5-B3F1-7338E695B202}.Release|Mixed Platforms.Build.0 = Release|x86
+		{88803DD2-C91B-4BD5-B3F1-7338E695B202}.Release|x86.ActiveCfg = Release|x86
+		{88803DD2-C91B-4BD5-B3F1-7338E695B202}.Release|x86.Build.0 = Release|x86
+		{DBA1487D-9D9A-402B-BF41-32AE0DBE45DB}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{DBA1487D-9D9A-402B-BF41-32AE0DBE45DB}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{DBA1487D-9D9A-402B-BF41-32AE0DBE45DB}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{DBA1487D-9D9A-402B-BF41-32AE0DBE45DB}.Debug|x86.ActiveCfg = Debug|x86
+		{DBA1487D-9D9A-402B-BF41-32AE0DBE45DB}.Debug|x86.Build.0 = Debug|x86
+		{DBA1487D-9D9A-402B-BF41-32AE0DBE45DB}.Release|Any CPU.ActiveCfg = Release|x86
+		{DBA1487D-9D9A-402B-BF41-32AE0DBE45DB}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{DBA1487D-9D9A-402B-BF41-32AE0DBE45DB}.Release|Mixed Platforms.Build.0 = Release|x86
+		{DBA1487D-9D9A-402B-BF41-32AE0DBE45DB}.Release|x86.ActiveCfg = Release|x86
+		{DBA1487D-9D9A-402B-BF41-32AE0DBE45DB}.Release|x86.Build.0 = Release|x86
+		{2D9F44D1-3D2E-4D12-A330-E7244CDB5BE7}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{2D9F44D1-3D2E-4D12-A330-E7244CDB5BE7}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{2D9F44D1-3D2E-4D12-A330-E7244CDB5BE7}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{2D9F44D1-3D2E-4D12-A330-E7244CDB5BE7}.Debug|x86.ActiveCfg = Debug|x86
+		{2D9F44D1-3D2E-4D12-A330-E7244CDB5BE7}.Debug|x86.Build.0 = Debug|x86
+		{2D9F44D1-3D2E-4D12-A330-E7244CDB5BE7}.Release|Any CPU.ActiveCfg = Release|x86
+		{2D9F44D1-3D2E-4D12-A330-E7244CDB5BE7}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{2D9F44D1-3D2E-4D12-A330-E7244CDB5BE7}.Release|Mixed Platforms.Build.0 = Release|x86
+		{2D9F44D1-3D2E-4D12-A330-E7244CDB5BE7}.Release|x86.ActiveCfg = Release|x86
+		{2D9F44D1-3D2E-4D12-A330-E7244CDB5BE7}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35
+	EndGlobalSection
+EndGlobal

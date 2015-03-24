@@ -1,0 +1,57 @@
+﻿<srv:StreamableWindow x:Class="WpfServer.Screens.MainWindow"
+        xmlns:srv="clr-namespace:WpfServer;assembly=WpfServer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="269" Width="495">
+    
+    <Canvas x:Name="root" HorizontalAlignment="Center">      
+        <Rectangle
+  Name="MyRectangle"
+  Width="100" 
+  Height="100"
+  Fill="Blue" MouseDown="MyRectangle_MouseDown">
+            <Rectangle.RenderTransform>
+                <RotateTransform x:Name="Rotator" Angle="45" />
+            </Rectangle.RenderTransform>
+            <Rectangle.Triggers>
+
+                <!-- Animates the rectangle's opacity. -->
+                <EventTrigger RoutedEvent="Rectangle.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+            Storyboard.TargetName="Rotator" 
+            Storyboard.TargetProperty="Angle"
+            From="45" To="0" Duration="0:0:3" AutoReverse="True" RepeatBehavior="Forever" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Rectangle.Triggers>
+        </Rectangle>
+        <Rectangle
+  Name="MyRectangle2"
+            MouseDown="MyRectangle_MouseDown"
+  Width="100" 
+  Height="100"
+  Fill="Red">
+            <Rectangle.RenderTransform>
+                <RotateTransform x:Name="Rotator2" Angle="45" />
+            </Rectangle.RenderTransform>
+            <Rectangle.Triggers>
+
+                <!-- Animates the rectangle's opacity. -->
+                <EventTrigger RoutedEvent="Rectangle.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+            Storyboard.TargetName="Rotator2" 
+            Storyboard.TargetProperty="Angle"
+            From="0" To="45" Duration="0:0:2" AutoReverse="True" RepeatBehavior="Forever" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Rectangle.Triggers>
+        </Rectangle>
+    </Canvas>
+    
+</srv:StreamableWindow>
